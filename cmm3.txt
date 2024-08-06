@@ -1,0 +1,33 @@
+head= input("enter head")
+tail=input("enter tail")
+st=input("enter char to be stuffed")
+res=head
+for i in st:
+    if i==head or i==tail:
+        res=res+i+i
+    else:
+        res=res+i
+res=res+tail
+print("stuffed one",res)
+
+
+
+
+
+
+st= input("enter the frame")
+count= 0
+res ='1'
+for i in st:
+    if i=='0' and count<5:
+        res +='0'
+        count +=1
+    elif i==' ':
+        pass
+    else:
+        res +=i
+        count =0
+    if count==5:
+        res +='101'
+        count =0
+print("frame after bit stuffing:",res)
